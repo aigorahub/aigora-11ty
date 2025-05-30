@@ -2,8 +2,8 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # Build command
-  command = "npm run build"
+  # Build command - explicitly install dependencies first
+  command = "npm install && npm run build"
   
   # Directory to publish (relative to root of repository)
   publish = "_site"
