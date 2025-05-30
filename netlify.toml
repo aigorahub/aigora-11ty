@@ -8,8 +8,8 @@
   # Directory to publish (relative to root of repository)
   publish = "_site"
   
-  # Node.js version
-  environment = { NODE_VERSION = "18" }
+  # Node.js version and NPM flags
+  environment = { NODE_VERSION = "18", NPM_FLAGS = "--include=dev" }
 
 # Production context
 [context.production]
