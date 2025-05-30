@@ -5,6 +5,22 @@
 @layer base {
     /* Import Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400&display=swap');
+
+    /* Ensure our themes override any defaults */
+    [data-theme="aigora-dark"] {
+        color-scheme: dark;
+    }
+
+    /* Fix any DaisyUI default blue/purple colors in dark mode */
+    [data-theme="aigora-dark"] .btn-primary {
+        background-color: #5FB96A;
+        border-color: #5FB96A;
+    }
+
+    [data-theme="aigora-dark"] .btn-secondary {
+        background-color: #A986C4;
+        border-color: #A986C4;
+    }
 }
 
 @layer utilities {

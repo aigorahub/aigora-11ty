@@ -60,6 +60,8 @@ module.exports = {
                     "warning": "#A986C4",        // lavender
                     "error": "#DB2955",          // errorRed
                 },
+            },
+            {
                 "aigora-dark": {
                     "primary": "#5FB96A",        // sage (same)
                     "secondary": "#A986C4",      // lavender (same)
@@ -76,5 +78,7 @@ module.exports = {
                 },
             },
         ],
+        darkTheme: false, // Disable automatic dark theme detection
+        logs: false, // Disable logs
     },
 };
