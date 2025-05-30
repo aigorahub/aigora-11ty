@@ -1,8 +1,8 @@
-# Aigora Eleventy Template
+# Aigora 11ty Template
 
 A sophisticated Eleventy starter template implementing the Aigora design system with Tailwind CSS and DaisyUI, now with a fully functional and accurate light/dark theme toggle.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aigorahub/aigora-eleventy-site)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aigorahub/aigora-11ty)
 
 ## Features
 
@@ -37,8 +37,8 @@ A sophisticated Eleventy starter template implementing the Aigora design system 
 
 ```bash
 # Clone the repository
-git clone https://github.com/aigora/aigora-eleventy-site.git
-cd aigora-eleventy-site
+git clone https://github.com/aigorahub/aigora-11ty.git
+cd aigora-11ty
 
 # Install dependencies
 npm install
