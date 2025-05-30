@@ -1,0 +1,9 @@
+# Netlify Redirects
+# https://docs.netlify.com/routing/redirects/
+
+# Example redirects (uncomment and modify as needed)
+# /old-page    /new-page    301
+# /blog/*      /news/:splat  301
+
+# Single Page Application support (if needed in future)
+# /*    /index.html   200 

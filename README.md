@@ -2,6 +2,8 @@
 
 A sophisticated Eleventy starter template implementing the Aigora design system with Tailwind CSS and DaisyUI.
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aigorahub/aigora-eleventy-site)
+
 ## Features
 
 - 🎨 Complete Aigora design system implementation
