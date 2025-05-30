@@ -51,12 +51,28 @@ module.exports = {
                     "secondary": "#A986C4",      // lavender  
                     "accent": "#5FB96A",         // sage
                     "neutral": "#1A1A1A",        // charcoal
-                    "base-100": "#EDEDED",       // fog
-                    "--base-content": "#1E1E1E", // darkText
+                    "base-100": "#EDEDED",       // fog (light background)
+                    "base-200": "#FFFFFF",       // white (card background)
+                    "base-300": "#E0E0E0",       // slightly darker
+                    "base-content": "#1E1E1E",   // darkText
                     "info": "#2C2C2C",           // slate
                     "success": "#5FB96A",        // sage
                     "warning": "#A986C4",        // lavender
                     "error": "#DB2955",          // errorRed
+                },
+                "aigora-dark": {
+                    "primary": "#5FB96A",        // sage (same)
+                    "secondary": "#A986C4",      // lavender (same)
+                    "accent": "#5FB96A",         // sage (same)
+                    "neutral": "#E0E0E0",        // light gray
+                    "base-100": "#1A1A1A",       // charcoal (dark background)
+                    "base-200": "#2C2C2C",       // slate (card background)
+                    "base-300": "#3A3A3A",       // slightly lighter
+                    "base-content": "#E0E0E0",   // light gray text
+                    "info": "#C8C8C8",           // soft gray
+                    "success": "#5FB96A",        // sage (same)
+                    "warning": "#A986C4",        // lavender (same)
+                    "error": "#DB2955",          // errorRed (same)
                 },
             },
         ],

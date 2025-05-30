@@ -8,6 +8,7 @@ A sophisticated Eleventy starter template implementing the Aigora design system 
 
 - 🎨 Complete Aigora design system implementation
 - 🌈 Light theme with sage and lavender accents
+- 🌓 Dark mode support with theme persistence
 - 📱 Fully responsive design
 - ⚡ Optimized performance with Eleventy
 - 🎯 Tailwind CSS with custom utilities
