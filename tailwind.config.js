@@ -3,16 +3,17 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                sage: '#5FB96A',
-                lavender: '#A986C4',
-                fog: '#EDEDED',
-                charcoal: '#1A1A1A',
-                slate: '#2C2C2C',
-                darkText: '#1E1E1E',
-                grayMeta: '#9A9A9A',
-                softGray: '#C8C8C8',
-                midGray: '#888888',
-                errorRed: '#DB2955'
+                // Aigora Design System Colors
+                'aigora-sage': '#5FB96A',
+                'aigora-lavender': '#A986C4',
+                'aigora-fog': '#EDEDED',
+                'aigora-charcoal': '#1A1A1A',
+                'aigora-slate': '#2C2C2C',
+                'aigora-dark-text': '#1E1E1E',
+                'aigora-gray-meta': '#9A9A9A',
+                'aigora-soft-gray': '#C8C8C8',
+                'aigora-mid-gray': '#888888',
+                'aigora-error': '#DB2955'
             },
             fontFamily: {
                 header: ['"Cormorant SC"', 'serif'],
@@ -44,9 +45,8 @@ module.exports = {
     },
     plugins: [require('daisyui')],
     daisyui: {
-        themes: ["light", "dark"],
-        darkTheme: "dark",
-        base: true,
+        themes: false, // Disable all themes and use custom CSS
+        base: false,
         styled: true,
         utils: true,
     },

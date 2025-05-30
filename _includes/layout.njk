@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' class="scroll-smooth" data-theme="light">
+<html lang='en' class="scroll-smooth" data-theme="aigora">
 <head>
   <meta charset='UTF-8'>
   <title>{{ title }}</title>
@@ -7,8 +7,8 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script>
-    // Check for saved theme preference or default to 'light'
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to 'aigora'
+    const savedTheme = localStorage.getItem('theme') || 'aigora';
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
 </head>
@@ -33,12 +33,12 @@
     
     // Set initial toggle state based on current theme
     const currentTheme = html.getAttribute('data-theme');
-    if (currentTheme === 'dark') {
+    if (currentTheme === 'aigora-dark') {
       toggle.checked = true;
     }
     
     toggle.addEventListener('change', () => {
-      const newTheme = toggle.checked ? 'dark' : 'light';
+      const newTheme = toggle.checked ? 'aigora-dark' : 'aigora';
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
     });
