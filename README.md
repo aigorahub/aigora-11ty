@@ -1,18 +1,27 @@
 # Aigora Eleventy Template
 
-A sophisticated Eleventy starter template implementing the Aigora design system with Tailwind CSS and DaisyUI.
+A sophisticated Eleventy starter template implementing the Aigora design system with Tailwind CSS and DaisyUI, now with a fully functional and accurate light/dark theme toggle.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aigorahub/aigora-eleventy-site)
 
 ## Features
 
 - 🎨 Complete Aigora design system implementation
-- 🌈 Light theme with sage and lavender accents
-- 🌓 Dark mode support with theme persistence
+- 💡 **Light Theme (Default)**:
+    - Primary: Sage (#5FB96A)
+    - Secondary: Lavender (#A986C4)
+    - Background: Fog (#EDEDED)
+    - Text: Dark Charcoal (#1E1E1E)
+- 🌙 **Dark Theme**:
+    - Primary: Sage (#5FB96A)
+    - Secondary: Lavender (#A986C4)
+    - Background: Deep Charcoal (#1A1A1A)
+    - Text: Light Gray (#E0E0E0)
+- ✨ Theme toggle button with localStorage persistence
 - 📱 Fully responsive design
 - ⚡ Optimized performance with Eleventy
 - 🎯 Tailwind CSS with custom utilities
-- 💅 DaisyUI components with Aigora theme
+- 💅 DaisyUI components styled with Aigora colors (via CSS custom properties)
 - 🖋️ Premium typography with Cormorant SC headers
 - 🌠 Advanced shadow system and animations
 - ♿ Accessibility-focused with proper focus states
@@ -50,13 +59,29 @@ npm run build
 
 ## Design System
 
-### Colors
+The Aigora design system is implemented primarily through CSS custom properties defined in `src/css/style.css`. This allows for easy theme switching and ensures accurate color representation.
 
-- **Primary**: Sage (#5FB96A)
-- **Secondary**: Lavender (#A986C4)
-- **Background**: Fog (#EDEDED)
-- **Text**: Dark Charcoal (#1E1E1E)
-- **Error**: Red (#DB2955)
+### Core Colors
+
+**Light Theme (default `aigora`):**
+- Page Background (`--color-base-100`): Fog (#EDEDED)
+- Card Background (`--color-base-200`): White (#FFFFFF)
+- Borders (`--color-base-300`): Light Gray (#E0E0E0)
+- Primary Text (`--color-base-content`, `--color-text-primary`): Dark Charcoal (#1E1E1E)
+- Sage Accent (`--color-primary`, `--color-accent`): Modern Sage (#5FB96A)
+- Lavender Accent (`--color-secondary`): Infra Lavender (#A986C4)
+- Meta Text (`--color-text-secondary`): Cool Gray (#9A9A9A)
+- Error: Red (#DB2955)
+
+**Dark Theme (`aigora-dark`):**
+- Page Background (`--color-base-100`): Deep Charcoal (#1A1A1A)
+- Card Background (`--color-base-200`): Modern Slate (#2C2C2C)
+- Borders (`--color-base-300`): Slightly Lighter Gray (#3A3A3A)
+- Primary Text (`--color-base-content`, `--color-text-primary`): Light Gray (#E0E0E0)
+- Sage Accent (`--color-primary`, `--color-accent`): Modern Sage (#5FB96A)
+- Lavender Accent (`--color-secondary`): Infra Lavender (#A986C4)
+- Meta Text (`--color-text-secondary`): Softer Gray (#C8C8C8)
+- Tertiary Text (`--color-text-tertiary`): Mid Gray (#888888)
 
 ### Typography
 
@@ -122,7 +147,11 @@ Add custom styles in `src/css/style.css`:
 
 ### Modifying Theme
 
-Update colors and fonts in `tailwind.config.js`.
+Colors are defined as CSS custom properties in `src/css/style.css` within the `:root, [data-theme="aigora"]` and `[data-theme="aigora-dark"]` selectors.
+Tailwind utilities like `bg-primary`, `text-secondary`, etc., will automatically use these theme-dependent variables.
+The theme toggle functionality is in `_includes/layout.njk`.
+
+DaisyUI theming is disabled (`daisyui: { themes: false }` in `tailwind.config.js`) to allow for precise control using custom CSS. However, DaisyUI's utility classes and styled components are still available and will adapt to the custom CSS variables.
 
 ## Deployment
 
