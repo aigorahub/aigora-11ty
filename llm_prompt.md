@@ -83,16 +83,13 @@ You MUST adhere strictly to the Aigora Brand Voice. Refer to the following guide
 
 **Output Format:**
 
-For each file that needs to be created or modified, provide:
+You MUST output a single JSON object. Each key in this object should be the full file path (e.g., `src/new-page.njk` or `src/css/style.css`) for a file that needs to be created or modified. The value associated with each key should be a string containing the complete content of that file.
 
-1.  The **full file path** (e.g., `src/new-page.njk` or `src/css/style.css`).
-2.  The **complete content** of that file.
+**Example JSON Output Structure:**
 
-**Example (Conceptual Output Structure):**
-
-```
-File: src/new-service-page.njk
----
+```json
+{
+  "src/new-service-page.njk": "---
 layout: layout.njk
 title: Our New Intelligent System Services
 ---
@@ -107,10 +104,8 @@ title: Our New Intelligent System Services
     <!-- More Aigora-styled content here -->
   </div>
 </section>
-// ... rest of the file content
-
-File: src/index.njk
----
+// ... rest of the file content",
+  "src/index.njk": "---
 layout: layout.njk
 title: Aigora Design System
 ---
@@ -129,7 +124,8 @@ title: Aigora Design System
 </section>
 
 <!-- ... rest of the original or modified index.njk content ... -->
-// ... rest of the file content
+// ... rest of the file content"
+}
 ```
 
 **Final Check**: Before outputting, review your generated files to ensure they are internally consistent, correctly reference assets, and fully embody the Aigora brand voice and visual style as detailed. Ensure all text, including headings and CTAs, aligns with the Aigora Keyword Lexicon and Tone Settings.
