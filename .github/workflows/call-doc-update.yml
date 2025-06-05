@@ -1,0 +1,25 @@
+name: Call Reusable Doc Update
+
+on:
+  push:
+    branches:
+      - main # Or 'master', 'develop', etc. - match your primary branch
+    # paths:
+    #   - 'src/**' # Uncomment and customize to trigger only on changes in source code
+    #   - 'app/**'
+    #   - '!docs/**' # Exclude changes in docs folder
+    #   - '!README.md' # Exclude changes in README
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  call_reusable_doc_update:
+    uses: 'aigorahub/aigora-github-workflows/.github/workflows/update-docs-reusable.yml@main' # Path to your reusable workflow
+    with:
+      target_branch: ${{ github.ref_name }}
+      repo_name: ${{ github.repository }}
+      repo_owner: ${{ github.repository_owner }}
+    secrets:
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
